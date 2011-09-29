@@ -1,5 +1,6 @@
 class Offerpage
   include Mongoid::Document
+  include Mongoid::Timestamps
   field :title, :type => String
   field :filename, :type => String
   field :description, :type => String
