@@ -2,6 +2,7 @@ h1. CHANGELOG
 
 h2. 0.0.4 unreleased
 
+* generate sitemap.xml after any article is published
 * fix permalink on welcome page for Facebook metadata
 * rename 'introdution' to 'about' on welcome page
 * change Facebook 'recommend' link location on articles pages

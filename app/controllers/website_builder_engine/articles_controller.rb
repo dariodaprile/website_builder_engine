@@ -26,6 +26,11 @@ module WebsiteBuilderEngine
       @welcome_intro = RedCloth.new(@settings.about).to_html.html_safe if @settings.about
       welcome_page = render_to_string(:template => "website_builder_engine/welcome/template.html.haml", :layout => false )
       File.open("#{@docroot_path}index.html", 'w') {|f| f.write(welcome_page) }
+      # create a sitemap.xml page
+      @offerpages = Offerpage.all
+      sitemap_page = render_to_string(:template => "website_builder_engine/templates/sitemap.xml.haml", :layout => false )
+      File.open("#{@docroot_path}sitemap.xml", 'w') {|f| f.write(sitemap_page) }
+      # display list of articles when done
       respond_to do |format|
         format.html { redirect_to articles_path, notice: "Built a webpage for the article \"#{@article.title}\"" }
       end

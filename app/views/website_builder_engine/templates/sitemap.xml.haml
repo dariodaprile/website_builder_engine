@@ -1,0 +1,21 @@
+!!! XML
+%urlset{:xmlns => "http://www.sitemaps.org/schemas/sitemap/0.9"}
+  %url
+    %loc= "http://#{@settings.domain}/index.html"
+    %lastmod= Time.now.to_date
+    %changefreq daily
+    %priority 1.0
+  - unless @articles.empty?
+    - for article in @articles
+      %url
+        %loc= "http://#{@settings.domain}/#{@settings.articles_directory}/#{article.filename}.html"
+        %lastmod= article.updated_at
+        %changefreq daily
+        %priority 0.5
+  - unless @offerpages.empty?
+    - for offerpage in @offerpages
+      %url
+        %loc= "http://#{@settings.domain}/#{@settings.offerpages_directory}/#{offerpage.filename}.html"
+        %lastmod= offerpage.updated_at
+        %changefreq daily
+        %priority 0.5
