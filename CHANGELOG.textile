@@ -1,6 +1,6 @@
 h1. CHANGELOG
 
-h2. 0.0.4 unreleased
+h2. 0.0.4 September 29, 2011
 
 * generate sitemap.xml after any article is published
 * fix permalink on welcome page for Facebook metadata
