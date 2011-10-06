@@ -16,17 +16,6 @@ module WebsiteBuilderEngine
 
     end
 
-    # GET /settings
-    # GET /settings.json
-    def index
-      @settings = Setting.all
-
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json { render json: @settings }
-      end
-    end
-
     # GET /settings/1
     # GET /settings/1.json
     def show
@@ -86,16 +75,5 @@ module WebsiteBuilderEngine
       end
     end
 
-    # DELETE /settings/1
-    # DELETE /settings/1.json
-    def destroy
-      @setting = Setting.find(params[:id])
-      @setting.destroy
-
-      respond_to do |format|
-        format.html { redirect_to settings_url }
-        format.json { head :ok }
-      end
-    end
   end
 end

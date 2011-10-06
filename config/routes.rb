@@ -1,21 +1,15 @@
 WebsiteBuilderEngine::Engine.routes.draw do
   
   resources :offerpages do
-    member do
-      get 'publish'
-    end
+    get 'publish', :on => :member
   end
 
   resources :articles do
-    member do
-      get 'publish'
-    end
+    get 'publish', :on => :member
   end
 
-  resources :settings do
-    member do
-      get 'publish'
-    end
+  resources :settings, :except => [:index, :destroy] do
+    get 'publish', :on => :member
   end
   
   root :to => "home#index"
