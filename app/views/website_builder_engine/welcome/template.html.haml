@@ -3,8 +3,13 @@
     %meta{:charset => "utf-8"}
     %meta{"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
-    %meta{:name=>'description', :content=>"#{@settings.site_description}"}
-    %meta{:name=>'keywords', :content=>"#{@settings.site_keywords}"}
+    %meta{:name =>"description", :content =>"#{@settings.site_description}"}
+    %meta{:name =>"keywords", :content =>"#{@settings.site_keywords}"}
+    -# meta tags for authentication of site ownership for Google and Bing webmaster tools 
+    - unless @settings.google_site_verification_code.blank?
+      %meta{:name => "google-site-verification", :content => "#{@settings.google_site_verification_code}"}
+    - unless @settings.bing_webmaster_tools_authentication_code.blank?
+      %meta{:name => "msvalidate.01", :content => "#{@settings.bing_webmaster_tools_authentication_code}"}
     -# meta tags for the Open Graph protocol for Facebook
     %meta{:property => "og:type", :content => "website"}
     %meta{:property => "og:url", :content => "http://#{@settings.domain}/index.html"}

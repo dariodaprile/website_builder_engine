@@ -14,4 +14,6 @@ class Setting
   field :google_analytics_id, :type => String
   field :twitter_account, :type => String
   field :facebook_admin_id, :type => String
+  field :google_site_verification_code, :type => String
+  field :bing_webmaster_tools_authentication_code, :type => String
 end

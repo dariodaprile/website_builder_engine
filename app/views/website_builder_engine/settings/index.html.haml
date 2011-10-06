@@ -9,7 +9,7 @@
 
   - @settings.each do |setting|
     %tr
-      %td= setting.articles_directory
+      %td= setting.site_name
       %td= link_to 'Show', setting
       %td= link_to 'Edit', edit_setting_path(setting)
       %td= link_to 'Destroy', setting, :confirm => 'Are you sure?', :method => :delete
