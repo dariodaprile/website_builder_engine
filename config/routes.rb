@@ -12,7 +12,11 @@ WebsiteBuilderEngine::Engine.routes.draw do
     end
   end
 
-  resources :settings
+  resources :settings do
+    member do
+      get 'publish'
+    end
+  end
   
   root :to => "home#index"
   

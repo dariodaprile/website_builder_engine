@@ -113,13 +113,5 @@ module WebsiteBuilderEngine
         format.html { redirect_to articles_url }
       end
     end
-  
-    protected    
-      def get_settings
-        @settings = Setting.first
-        @docroot_path = "#{Rails.root}/public/"
-        @file_path = "#{@docroot_path}#{@settings.articles_directory}/"
-        @url_path = "/#{@settings.articles_directory}/"
-      end
   end
 end

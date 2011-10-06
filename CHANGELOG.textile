@@ -2,7 +2,7 @@ h1. CHANGELOG
 
 h2. 0.0.5 unreleased
 
-* add button to update home page
+* add link to generate or recreate the home page
 * add metatag for Google Webmaster Tools to home page
 * add metatag for Bing Webmaster Tools to home page
 * add option to include Disqus comments on article pages

@@ -8,7 +8,7 @@
     %li
       %strong
         =link_to "Settings:", website_builder_engine.settings_path
-      \ Provide basic information about your site.
+      \ Provide basic information to create your site.
     %li
       %strong
         =link_to "Offer Page:", website_builder_engine.offerpages_path
@@ -18,8 +18,9 @@
         =link_to "Articles:", website_builder_engine.articles_path
       \ Create articles.
     %li
-      %strong Extras:
-      \ #{link_to "View your site", "/index.html"}.
+      %strong Finish up:
+      #{link_to 'Generate home page', website_builder_engine.publish_setting_path(1)},
+      \ #{link_to "view your site", "/index.html"}.
 .one-third.column
   %h3 Docs & Support
   %p More to come.
