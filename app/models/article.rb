@@ -12,4 +12,5 @@ class Article
   field :sidebar, :type => String
   field :published, :type => Boolean
   field :related_items, :type => Array
+  field :disqus_enabled, :type => Boolean
 end

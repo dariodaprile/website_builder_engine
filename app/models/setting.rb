@@ -16,4 +16,5 @@ class Setting
   field :facebook_admin_id, :type => String
   field :google_site_verification_code, :type => String
   field :bing_webmaster_tools_authentication_code, :type => String
+  field :disqus_shortname, :type => String
 end

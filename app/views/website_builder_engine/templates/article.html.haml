@@ -42,6 +42,8 @@
             %h2
               = @article.subhead
         = @content
+        - if @article.disqus_enabled
+          = render 'shared/disqus_comments'
       %aside.four.columns
         %section
           %h2

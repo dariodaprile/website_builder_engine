@@ -52,8 +52,10 @@ article1 = Article.create! :title => 'Installing Rails 3.1',
   :headline => 'Read This Before Installing Rails 3.1',
   :subhead => 'What You Need to Know',
   :content => data,
-  :published => false,
-  :related_items => []
+  :sidebar => setting.sidebar,
+  :related_items => [],
+  :disqus_enabled => false,
+  :published => false
 puts "Created sample article #{article1.id}"
 article2 = Article.create! :title => 'Using Rails 3.1',
   :filename => 'using-rails-3-1',
@@ -64,5 +66,6 @@ article2 = Article.create! :title => 'Using Rails 3.1',
   :content => data,
   :sidebar => setting.sidebar,
   :related_items => [article1._id.to_s],
+  :disqus_enabled => false,
   :published => false
 puts "Created sample article #{article2.id}"
