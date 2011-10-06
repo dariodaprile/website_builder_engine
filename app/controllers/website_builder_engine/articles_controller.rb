@@ -16,7 +16,7 @@ module WebsiteBuilderEngine
       @permalink = "http://#{@settings.domain}/#{@settings.articles_directory}/#{@article.filename}.html"
       @content = RedCloth.new(@article.content).to_html.html_safe
       @sidebar = RedCloth.new(@article.sidebar).to_html.html_safe if @article.sidebar
-      article_page = render_to_string(:template => "website_builder_engine/articles/template.html.haml", :layout => false )
+      article_page = render_to_string(:template => "website_builder_engine/templates/article.html.haml", :layout => false )
       FileUtils.makedirs(@file_path) unless File.exists?(@file_path)
       File.open("#{@file_path + @article.filename}.html", 'w') {|f| f.write(article_page) }
       @article.update_attribute(:published, true)
@@ -24,7 +24,7 @@ module WebsiteBuilderEngine
       @articles = Article.where(published: true)
       @welcome_sidebar = RedCloth.new(@settings.sidebar).to_html.html_safe if @settings.sidebar
       @welcome_intro = RedCloth.new(@settings.about).to_html.html_safe if @settings.about
-      welcome_page = render_to_string(:template => "website_builder_engine/welcome/template.html.haml", :layout => false )
+      welcome_page = render_to_string(:template => "website_builder_engine/templates/welcome.html.haml", :layout => false )
       File.open("#{@docroot_path}index.html", 'w') {|f| f.write(welcome_page) }
       # create a sitemap.xml page
       @offerpages = Offerpage.all

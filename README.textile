@@ -200,8 +200,8 @@ h4. Modify a Template File
 You change the structure of the files by overriding the engine's template files. Copy the originals from the GitHub repository:
 
 <pre>
-$ curl -o app/views/website_builder_engine/articles/template.html.haml https://github.com/DanielKehoe/website_builder_engine/blob/master/app/views/website_builder_engine/articles/template.html.haml
-$ curl -o app/views/website_builder_engine/offerpages/template.html.haml https://github.com/DanielKehoe/website_builder_engine/blob/master/app/views/website_builder_engine/offerpages/template.html.haml
+$ curl -o app/views/website_builder_engine/templates/article.html.haml https://github.com/DanielKehoe/website_builder_engine/blob/master/app/views/website_builder_engine/templates/article.html.haml
+$ curl -o app/views/website_builder_engine/templates/offerpage.html.haml https://github.com/DanielKehoe/website_builder_engine/blob/master/app/views/website_builder_engine/templates/offerpage.html.haml
 </pre>
 
 Modify or replace the originals with templates of your own design.

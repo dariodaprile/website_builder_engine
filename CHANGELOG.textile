@@ -6,6 +6,7 @@ h2. 0.0.5 unreleased
 * add metatag for Google Webmaster Tools to home page
 * add metatag for Bing Webmaster Tools to home page
 * add option to include Disqus comments on article pages
+* refactor to consolidate templates in their own directory
 
 h2. 0.0.4 September 29, 2011
 

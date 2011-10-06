@@ -8,7 +8,7 @@ module WebsiteBuilderEngine
       @articles = Article.where(published: true)
       @welcome_sidebar = RedCloth.new(@settings.sidebar).to_html.html_safe if @settings.sidebar
       @welcome_intro = RedCloth.new(@settings.about).to_html.html_safe if @settings.about
-      welcome_page = render_to_string(:template => "website_builder_engine/welcome/template.html.haml", :layout => false )
+      welcome_page = render_to_string(:template => "website_builder_engine/templates/homepage.html.haml", :layout => false )
       File.open("#{@docroot_path}index.html", 'w') {|f| f.write(welcome_page) }
       respond_to do |format|
         format.html { redirect_to root_url, notice: "Updated home page." }
