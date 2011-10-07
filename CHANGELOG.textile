@@ -1,6 +1,6 @@
 h1. CHANGELOG
 
-h2. 0.0.5 unreleased
+h2. 0.0.5 October 6, 2011
 
 * add option to include Disqus comments on article pages
 * add link to generate or recreate the home page
